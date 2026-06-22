@@ -1,0 +1,286 @@
+/* ===================================== /
+/ =========== TETRIS BLOCKS =========== /
+/ ===================================== */
+
+/* ===================================== /
+/ COMMON BLOCK /
+/ ===================================== */
+
+.block{
+
+width:40px;
+
+height:40px;
+
+border-radius:4px;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* ===================================== /
+/ SHINE EFFECT /
+/ ===================================== */
+
+.block::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:40%;
+
+background:
+
+    linear-gradient(
+        180deg,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+}
+
+/* ===================================== /
+/ I PIECE /
+/ ===================================== */
+
+.block-i{
+
+background:#29adff;
+
+border:2px solid #7ed0ff;
+
+box-shadow:
+    inset 0 -4px rgba(0,0,0,.25),
+    0 0 10px rgba(41,173,255,.45);
+
+}
+
+/* ===================================== /
+/ O PIECE /
+/ ===================================== */
+
+.block-o{
+
+background:#ffd500;
+
+border:2px solid #ffe873;
+
+box-shadow:
+    inset 0 -4px rgba(0,0,0,.25),
+    0 0 10px rgba(255,213,0,.45);
+
+}
+
+/* ===================================== /
+/ T PIECE /
+/ ===================================== */
+
+.block-t{
+
+background:#c44cff;
+
+border:2px solid #db94ff;
+
+box-shadow:
+    inset 0 -4px rgba(0,0,0,.25),
+    0 0 10px rgba(196,76,255,.45);
+
+}
+
+/* ===================================== /
+/ S PIECE /
+/ ===================================== */
+
+.block-s{
+
+background:#61ff37;
+
+border:2px solid #98ff7d;
+
+box-shadow:
+    inset 0 -4px rgba(0,0,0,.25),
+    0 0 10px rgba(97,255,55,.45);
+
+}
+
+/* ===================================== /
+/ Z PIECE /
+/ ===================================== */
+
+.block-z{
+
+background:#ff4343;
+
+border:2px solid #ff8c8c;
+
+box-shadow:
+    inset 0 -4px rgba(0,0,0,.25),
+    0 0 10px rgba(255,67,67,.45);
+
+}
+
+/* ===================================== /
+/ J PIECE /
+/ ===================================== */
+
+.block-j{
+
+background:#3c6cff;
+
+border:2px solid #88a3ff;
+
+box-shadow:
+    inset 0 -4px rgba(0,0,0,.25),
+    0 0 10px rgba(60,108,255,.45);
+
+}
+
+/* ===================================== /
+/ L PIECE /
+/ ===================================== */
+
+.block-l{
+
+background:#ff8f00;
+
+border:2px solid #ffbc66;
+
+box-shadow:
+    inset 0 -4px rgba(0,0,0,.25),
+    0 0 10px rgba(255,143,0,.45);
+
+}
+
+/* ===================================== /
+/ GHOST PIECE /
+/ ===================================== */
+
+.ghost-piece{
+
+opacity:.25;
+
+filter:grayscale(.2);
+
+border-style:dashed;
+
+}
+
+/* ===================================== /
+/ HOLD BLOCK /
+/ ===================================== */
+
+.hold-block{
+
+transform:scale(.9);
+
+}
+
+/* ===================================== /
+/ NEXT BLOCK /
+/ ===================================== */
+
+.next-block{
+
+animation:
+    nextAppear .3s ease;
+
+}
+
+@keyframes nextAppear{
+
+from{
+
+    opacity:0;
+
+    transform:
+        scale(.6)
+        rotate(-10deg);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:
+        scale(1)
+        rotate(0deg);
+
+}
+
+}
+
+/* ===================================== /
+/ LOCK EFFECT /
+/ ===================================== */
+
+.lock-flash{
+
+animation:
+    lockFlash .18s ease;
+
+}
+
+@keyframes lockFlash{
+
+0%{
+
+    filter:brightness(1);
+
+}
+
+50%{
+
+    filter:brightness(1.8);
+
+}
+
+100%{
+
+    filter:brightness(1);
+
+}
+
+}
+
+/* ===================================== /
+/ LINE CLEAR /
+/ ===================================== */
+
+.line-clear{
+
+animation:
+    lineClear .35s forwards;
+
+}
+
+@keyframes lineClear{
+
+0%{
+
+    opacity:1;
+
+}
+
+50%{
+
+    opacity:.2;
+
+    transform:scale(1.08);
+
+}
+
+100%{
+
+    opacity:0;
+
+}
+
+}

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TETRIS</title>
+
+    <link rel="stylesheet" href="testris.css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="comboText"></div>
+    <div id="comboCounter"></div>
+    
+    <!-- BACKGROUND -->
+    <canvas id="bg"></canvas>
+
+    <!-- MENU SCREEN -->
+<div id="menuScreen">
+
+    <div class="menu-frame">
+
+        <!-- Pixel decorations -->
+        <div class="pixel-corner tl"></div>
+        <div class="pixel-corner tr"></div>
+        <div class="pixel-corner bl"></div>
+        <div class="pixel-corner br"></div>
+
+        <!-- Floating blocks -->
+        <div class="floating-block block1"></div>
+        <div class="floating-block block2"></div>
+        <div class="floating-block block3"></div>
+        <div class="floating-block block4"></div>
+
+        <!-- Logo -->
+        <h1 class="tetris-style menu-logo">
+            <span>T</span>
+            <span>E</span>
+            <span>T</span>
+            <span>R</span>
+            <span>I</span>
+            <span>S</span>
+        </h1>
+
+        <!-- Buttons -->
+        <div class="menu-buttons">
+
+            <button id="startBtn" class="retro-menu-btn play-btn">
+                ▶ PLAY
+            </button>
+
+            <button id="startBtn2" class="retro-menu-btn duo-menu-btn">
+                👥 DUO
+            </button>
+
+            <button id="startBtn3" class="retro-menu-btn settings-menu-btn">
+                ⚙ SETTINGS
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <div id="settingsScreen" class="hidden" style="display: none;">
+
+    <div class="settingsBox">
+
+        <h2>Controls</h2>
+
+<div class="settingRow">
+    <span>Solo Left</span>
+    <button
+    id="soloLeftBtn"
+    class="keybind-btn">ArrowLeft</button>
+</div>
+
+<div class="settingRow">
+    <span>Solo Right</span>
+    <button id="soloRightBtn">ArrowRight</button>
+</div>
+
+<div class="settingRow">
+    <span>Solo Rotate</span>
+    <button id="soloUpBtn">ArrowUp</button>
+</div>
+
+<div class="settingRow">
+    <span>Solo Down</span>
+    <button id="soloDownBtn">ArrowDown</button>
+</div>
+
+<div class="settingRow">
+    <span>Solo Hold</span>
+    <button id="soloHoldBtn">ShiftLeft</button>
+</div>
+
+<div class="settingRow">
+    <span>Solo Hard Drop</span>
+    <button id="soloDropBtn">Space</button>
+</div>
+
+<h2>Player 1 Controls</h2>
+
+<div class="settingRow">
+    <span>P1 Left</span>
+    <button id="p1LeftBtn">KeyA</button>
+</div>
+
+<div class="settingRow">
+    <span>P1 Right</span>
+    <button id="p1RightBtn">KeyD</button>
+</div>
+
+<div class="settingRow">
+    <span>P1 Rotate</span>
+    <button id="p1UpBtn">KeyW</button>
+</div>
+
+<div class="settingRow">
+    <span>P1 Down</span>
+    <button id="p1DownBtn">KeyS</button>
+</div>
+
+<div class="settingRow">
+    <span>P1 Hold</span>
+    <button id="p1HoldBtn">KeyQ</button>
+</div>
+
+<div class="settingRow">
+    <span>P1 Hard Drop</span>
+    <button id="p1DropBtn">KeyE</button>
+</div>
+
+<h2>Player 2 Controls</h2>
+
+<div class="settingRow">
+    <span>P2 Left</span>
+    <button id="p2LeftBtn">ArrowLeft</button>
+</div>
+
+<div class="settingRow">
+    <span>P2 Right</span>
+    <button id="p2RightBtn">ArrowRight</button>
+</div>
+
+<div class="settingRow">
+    <span>P2 Rotate</span>
+    <button id="p2UpBtn">ArrowUp</button>
+</div>
+
+<div class="settingRow">
+    <span>P2 Down</span>
+    <button id="p2DownBtn">ArrowDown</button>
+</div>
+
+<div class="settingRow">
+    <span>P2 Hold</span>
+    <button id="p2HoldBtn">ShiftRight</button>
+</div>
+
+<div class="settingRow">
+    <span>P2 Hard Drop</span>
+    <button id="p2DropBtn">Space</button>
+</div>
+
+<button
+    id="backBtn"
+    class="cyber-btn">
+    BACK
+</button>
+
+    </div>
+
+</div>
+    <!-- GAME SCREEN -->
+    <div id="gameScreen" class="hidden">
+
+       <div class="container">
+
+    <!-- CỘT TRÁI -->
+    <div class="left-column">
+        <div class="hold-panel">
+            <h3>HOLD</h3>
+            <canvas id="holdCanvas" width="120" height="120"></canvas>
+        </div>
+
+        <div class="next-panel">
+            <h3>NEXT</h3>
+            <canvas id="nextCanvas" width="120" height="120"></canvas>
+        </div>
+        <!-- ============ SCORE ============= -->
+
+        <div class="panel score-panel">
+            <div class="score-label">
+                SCORE
+            </div>
+
+            <div id="score">
+                0
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CỘT GIỮA -->
+    <div class="board-frame">
+
+        <div class="board-light-top"></div>
+        <div class="board-light-bottom"></div>
+
+        <div class="board-side-light board-side-left-1"></div>
+        <div class="board-side-light board-side-left-2"></div>
+
+        <div class="board-side-light board-side-right-1"></div>
+        <div class="board-side-light board-side-right-2"></div>
+
+        <canvas id="board" width="400" height="800"></canvas>
+
+    </div>
+
+    <!-- CỘT PHẢI -->
+    <div class="sidebar-frame">
+
+        <!-- ============ LOGO ============== -->
+
+        <div class="panel logo-panel">
+
+            <h1 class="tetris-style">
+                <span>T</span>
+                <span>E</span>
+                <span>T</span>
+                <span>R</span>
+                <span>I</span>
+                <span>S</span>
+            </h1>
+
+        </div>
+
+
+        <!-- ============ PAUSE ============= -->
+
+        <button id="pause" class="cyber-btn">
+            PAUSE
+        </button>
+
+        <!-- ============ RESUME ============ -->
+
+        <button id="resume" class="cyber-btn">
+            RESUME
+        </button>
+
+        <!-- ========= BACK MENU ============ -->
+
+        <button id="backMenu" class="cyber-btn">
+            BACK MENU
+        </button>
+
+        <!-- ========= LEADERBOARD ========== -->
+
+        <div class="panel leaderboard-panel">
+
+            <div class="leaderboard-title">
+                BEST SCORES
+            </div>
+
+            <ul id="leaderboard">
+
+                <li>
+                    <span>#1</span>
+                    <span>1640</span>
+                </li>
+
+                <li>
+                    <span>#2</span>
+                    <span>520</span>
+                </li>
+
+                <li>
+                    <span>#3</span>
+                    <span>150</span>
+                </li>
+
+                <li>
+                    <span>#4</span>
+                    <span>50</span>
+                </li>
+
+                <li>
+                    <span>#5</span>
+                    <span>50</span>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+<div id="dualGameScreen" class="hidden">
+
+    <!-- HOLD PLAYER 1 -->
+    <div class="hold-box">
+        <h3>HOLD</h3>
+        <canvas id="holdCanvas1" width="120" height="120"></canvas>
+    </div>
+
+    <!-- PLAYER 1 -->
+    <div class="duo-player">
+
+        <!-- TOP INFO -->
+        <div class="player-top-panel">
+
+            <div class="player-name">
+                PLAYER 1
+            </div>
+
+            <div class="player-stats">
+
+                <div class="stat-box">
+                    <span>SCORE</span>
+                    <p id="score1">0</p>
+                </div>
+
+                <div class="stat-box">
+                    <span>DIFF</span>
+                    <p id="diff1">0</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- BOARD -->
+        <div class="board-frame board1-frame">
+                <div class="board-light-top"></div>
+                <div class="board-light-bottom"></div>
+
+                <div class="board-side-light board-side-left-1"></div>
+                <div class="board-side-light board-side-left-2"></div>
+
+                <div class="board-side-light board-side-right-1"></div>
+                <div class="board-side-light board-side-right-2"></div>
+
+                <canvas id="board1" width="320" height="640"></canvas>
+        </div>
+    </div>
+
+    <!-- CENTER -->
+    <div class="duo-center">
+
+        <div class="duo-logo">
+            TETRIS
+        </div>
+
+        <button id="pauseDual" class="duo-btn">
+            PAUSE
+        </button>
+
+        <button id="resumeDual" class="duo-btn">
+            RESUME
+        </button>
+
+        <button id="backMenuDual" class="duo-btn">
+            BACK MENU
+        </button>
+
+    </div>
+
+    <!-- PLAYER 2 -->
+    <div class="duo-player">
+
+        <!-- TOP INFO -->
+        <div class="player-top-panel">
+
+            <div class="player-name">
+                PLAYER 2
+            </div>
+
+            <div class="player-stats">
+
+                <div class="stat-box">
+                    <span>SCORE</span>
+                    <p id="score2">0</p>
+                </div>
+
+                <div class="stat-box">
+                    <span>DIFF</span>
+                    <p id="diff2">0</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- BOARD -->
+        <div class="board-frame board2-frame">
+                <div class="board-light-top"></div>
+                <div class="board-light-bottom"></div>
+
+                <div class="board-side-light board-side-left-1"></div>
+                <div class="board-side-light board-side-left-2"></div>
+
+                <div class="board-side-light board-side-right-1"></div>
+                <div class="board-side-light board-side-right-2"></div>
+
+                <canvas id="board2" width="320" height="640"></canvas>
+        </div>
+
+    </div>
+
+    <!-- HOLD PLAYER 2 -->
+    <div class="hold-box">
+        <h3>HOLD</h3>
+        <canvas id="holdCanvas2" width="120" height="120"></canvas>
+    </div>
+    
+
+</div>
+<div id="gameOverModal" class="game-over-modal">
+        <div class="game-over-content">
+            <h2 id="modalTitle">GAME OVER</h2>
+            <p id="modalMessage">You lost!</p>
+            <div id="modalScoreContainer">
+                <p>Score: <span id="modalScore">0</span></p>
+            </div>
+            <div class="modal-btn-group">
+                <button id="modalRestartBtn">REPLAY</button>
+                <button id="modalMenuBtn">MENU</button>
+            </div>
+        </div>
+    </div>
+<div id = "loading-Screen">
+
+        <div class = "loader-container">
+
+            <div class = "loading-cube"></div>
+
+            <p class="loading-text">
+
+              <span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span><span>.</span><span>.</span><span>. </span>
+
+            </p>
+
+        </div>
+</div>
+<script src="testris.js/background.js"></script>
+
+<script src="testris.js/pieces.js"></script>
+
+<script src="testris.js/systems/hold.js"></script>
+<script src="testris.js/systems/leaderboard.js"></script>
+<script src="testris.js/systems/preview.js"></script>
+<script src="testris.js/systems/level.js"></script>
+<script src="testris.js/systems/effect.js"></script>
+<script src="testris.js/systems/scoreAnimation.js"></script>
+<script src="testris.js/systems/ending.js"></script>
+<script src="testris.js/systems/trap.js"></script>
+
+<script src="testris.js/tetris.js"></script>
+<script src="testris.js/duo.js"></script>
+<script src="testris.js/controls.js"></script>
+<script src="testris.js/settings.js"></script>
+<script src="testris.js/menu.js"></script>
+<script src="testris.js/main.js"></script>
+</body>
+</html>

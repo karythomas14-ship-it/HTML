@@ -1,0 +1,85 @@
+body{
+    background: black;
+    transition: opacity 0.3s;
+}
+
+#introScreen{
+    position: fixed;
+    inset: 0;
+
+    background-image: url("img_game/z7814041493856_23e0bd876d759e1a1af3540f32442e26.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+    color: white;
+    transition: 1s;
+}
+
+#introScreen::before{
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0,0,0,0.65);
+    
+    -webkit-backdrop-filter: blur(3px); 
+    backdrop-filter: blur(3px);
+}
+
+#logoContainer{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.introLogo{
+    width: 200px;
+    animation: zoom 2s ease;
+    filter: drop-shadow(0 0 13px rgb(255, 72, 0));
+}
+
+#introText{
+    position: relative;
+    z-index: 1;
+
+    margin-top: 20px;
+    opacity: 0;
+
+    animation: fadeIn 2s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes zoom{
+
+    0%{
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+    }
+}

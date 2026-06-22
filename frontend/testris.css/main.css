@@ -1,0 +1,37 @@
+/* ========================= */
+/* BASE */
+/* ========================= */
+
+@import url("./base/reset.css");
+
+@import url("./base/variables.css");
+
+@import url("./base/game-fonts.css");
+
+@import url("./base/global-game-style.css");
+
+/* ========================= */
+/* COMPONENTS */
+/* ========================= */
+
+@import url("./components/buttons.css");
+@import url("./components/controls.css");
+@import url("./components/effect.css");
+@import url("./components/logo.css");
+@import url("./components/background.css");
+@import url("./components/panels.css");
+@import url("./components/popup-window.css");
+@import url("./components/score.css");
+@import url("./components/tetris-block.css");
+@import url("./components/tetris-board.css");
+@import url("./components/loading.css");
+
+/* ========================= */
+/* PAGES */
+/* ========================= */
+
+@import url("./pages/menu.css");
+@import url("./pages/settings.css");
+@import url("./pages/solo.css");
+@import url("./pages/duo.css");
+@import url("./pages/ending.css");

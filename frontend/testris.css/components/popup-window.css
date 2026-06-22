@@ -1,0 +1,313 @@
+/* ===================================== /
+/ ========== POPUP WINDOW ============= /
+/ ===================================== */
+
+/* OVERLAY */
+
+.popup-overlay{
+
+position:fixed;
+
+inset:0;
+
+background:
+    rgba(0,0,0,.75);
+
+-webkit-backdrop-filter: blur(4px);
+backdrop-filter:blur(4px);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+animation:
+    overlayFade .25s ease;
+
+}
+
+/* ===================================== /
+/ POPUP BOX /
+/ ===================================== */
+
+.popup-window{
+
+width:520px;
+
+max-width:90vw;
+
+padding:40px;
+
+text-align:center;
+
+border-radius:22px;
+
+border:5px solid #dcdcdc;
+
+background:
+    linear-gradient(
+        180deg,
+        #091626,
+        #020912
+    );
+
+box-shadow:
+    0 0 30px rgba(0,0,0,.6),
+    inset 0 0 15px rgba(255,255,255,.08);
+
+animation:
+    popupShow .3s ease;
+
+}
+
+/* ===================================== /
+/ TITLE /
+/ ===================================== */
+
+.popup-title{
+
+font-size:28px;
+
+margin-bottom:25px;
+
+color:white;
+
+}
+
+/* ===================================== /
+/ MESSAGE /
+/ ===================================== */
+
+.popup-message{
+
+font-size:14px;
+
+line-height:1.8;
+
+margin-bottom:30px;
+
+color:#d8d8d8;
+
+}
+
+/* ===================================== /
+/ BUTTON AREA /
+/ ===================================== */
+
+.popup-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+}
+
+/* ===================================== /
+/ PAUSE /
+/ ===================================== */
+
+.pause-popup .popup-title{
+
+color:#29adff;
+
+text-shadow:
+    0 0 10px #29adff,
+    0 0 20px #29adff;
+
+}
+
+/* ===================================== /
+/ GAME OVER /
+/ ===================================== */
+
+.gameover-popup .popup-title{
+
+color:#ff4343;
+
+text-shadow:
+    0 0 10px #ff4343,
+    0 0 20px #ff4343,
+    0 0 40px #ff4343;
+
+}
+
+/* ===================================== /
+/ WINNER /
+/ ===================================== */
+
+.winner-popup .popup-title{
+
+color:#ffd500;
+
+text-shadow:
+    0 0 10px #ffd500,
+    0 0 20px #ffd500,
+    0 0 40px #ffd500;
+
+}
+
+/* ===================================== /
+/ PLAYER WIN /
+/ ===================================== */
+
+.winner-name{
+
+display:block;
+
+margin-top:15px;
+
+font-size:34px;
+
+color:#61ff37;
+
+text-shadow:
+    0 0 10px #61ff37,
+    0 0 20px #61ff37,
+    0 0 40px #61ff37;
+
+}
+
+/* ===================================== /
+/ SCORE RESULT /
+/ ===================================== */
+
+.result-score{
+
+margin-top:20px;
+
+font-size:22px;
+
+color:#ffffff;
+
+text-shadow:
+    0 0 10px #00bfff;
+
+}
+
+/* ===================================== /
+/ STATS BOX /
+/ ===================================== */
+
+.popup-stats{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+margin-top:25px;
+
+margin-bottom:25px;
+
+}
+
+.popup-stat{
+
+min-width:120px;
+
+padding:15px;
+
+border-radius:12px;
+
+background:#13263c;
+
+border:2px solid #5bc8ff;
+
+}
+
+.popup-stat span{
+
+display:block;
+
+margin-bottom:10px;
+
+font-size:10px;
+
+}
+
+.popup-stat p{
+
+font-size:18px;
+
+}
+
+/* ===================================== /
+/ ANIMATION /
+/ ===================================== */
+
+@keyframes popupShow{
+
+from{
+
+    opacity:0;
+
+    transform:
+        scale(.7);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:
+        scale(1);
+
+}
+
+}
+
+@keyframes overlayFade{
+
+from{
+
+    opacity:0;
+
+}
+
+to{
+
+    opacity:1;
+
+}
+
+}
+
+/* ===================================== /
+/ CLOSE ANIMATION /
+/ ===================================== */
+
+.popup-hide{
+
+animation:
+    popupHide .25s forwards;
+
+}
+
+@keyframes popupHide{
+
+from{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+to{
+
+    opacity:0;
+
+    transform:scale(.8);
+
+}
+
+}

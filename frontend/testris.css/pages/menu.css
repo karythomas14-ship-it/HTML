@@ -1,0 +1,263 @@
+/* ===================================== /
+/ ============== MENU ================= /
+/ ===================================== */
+
+#menuScreen{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* ===================================== /
+/ MENU FRAME /
+/ ===================================== */
+
+.menu-frame{
+
+position:relative;
+
+width:800px;
+
+min-height:650px;
+
+padding:60px 50px;
+
+border-radius:24px;
+
+border:6px solid #d8d8d8;
+
+background:
+
+    linear-gradient(
+        180deg,
+        #0b1726,
+        #040b13
+    );
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+box-shadow:
+    inset 0 0 20px rgba(255,255,255,.08),
+    0 0 40px rgba(0,0,0,.45);
+
+}
+
+/* ===================================== /
+/ LOGO /
+/ ===================================== */
+
+.menu-logo{
+
+font-size:84px;
+
+margin-bottom:55px;
+
+line-height:1;
+
+}
+
+.menu-logo span{
+
+display:inline-block;
+
+}
+
+/* ===================================== /
+/ BUTTON AREA /
+/ ===================================== */
+
+.menu-buttons{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+width:100%;
+
+}
+
+/* ===================================== /
+/ PIXEL CORNER /
+/ ===================================== */
+
+.pixel-corner{
+
+position:absolute;
+
+width:30px;
+
+height:30px;
+
+background:#ffffff;
+
+z-index:2;
+
+}
+
+.pixel-corner.tl{
+
+top:-15px;
+left:-15px;
+
+}
+
+.pixel-corner.tr{
+
+top:-15px;
+right:-15px;
+
+}
+
+.pixel-corner.bl{
+
+bottom:-15px;
+left:-15px;
+
+}
+
+.pixel-corner.br{
+
+bottom:-15px;
+right:-15px;
+
+}
+
+/* ===================================== /
+/ FLOATING BLOCKS /
+/ ===================================== */
+
+.floating-block{
+
+position:absolute;
+
+border-radius:8px;
+
+box-shadow:
+    0 0 20px rgba(255,255,255,.15);
+
+}
+
+/* BLOCK 1 */
+
+.block1{
+
+width:70px;
+height:70px;
+
+top:50px;
+left:60px;
+
+}
+
+/* BLOCK 2 */
+
+.block2{
+
+width:65px;
+height:65px;
+
+top:90px;
+right:70px;
+
+}
+
+/* BLOCK 3 */
+
+.block3{
+
+width:60px;
+height:60px;
+
+bottom:80px;
+left:90px;
+
+}
+
+/* BLOCK 4 */
+
+.block4{
+
+width:75px;
+height:75px;
+
+bottom:60px;
+right:80px;
+
+}
+
+/* ===================================== /
+/ MENU GLOW /
+/ ===================================== */
+
+.menu-frame::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+border-radius:24px;
+
+pointer-events:none;
+
+box-shadow:
+    inset 0 0 30px rgba(0,191,255,.08);
+
+}
+
+/* ===================================== /
+/ RESPONSIVE /
+/ ===================================== */
+
+@media(max-width:1000px){
+
+.menu-frame{
+
+    width:90vw;
+
+    min-height:600px;
+
+    padding:40px;
+
+}
+
+.menu-logo{
+
+    font-size:60px;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.menu-logo{
+
+    font-size:42px;
+
+}
+
+.retro-menu-btn{
+
+    width:260px;
+
+}
+
+}

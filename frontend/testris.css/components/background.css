@@ -1,0 +1,79 @@
+/* ===================================== */
+/* ============ BACKGROUND ============= */
+/* ===================================== */
+
+#bg{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100vw;
+    height:100vh;
+
+    z-index:-1;
+
+}
+
+/* ===================================== */
+/* BODY */
+/* ===================================== */
+
+body{
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #12243c 0%,
+            #08111d 45%,
+            #02070d 100%
+        );
+
+}
+
+/* ===================================== */
+/* SCREENS */
+/* ===================================== */
+
+#menuScreen,
+#settingsScreen,
+#gameScreen,
+#dualGameScreen{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ===================================== */
+/* GLOBAL GLOW */
+/* ===================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(0,191,255,.04),
+            transparent 70%
+        );
+
+    z-index:0;
+
+}

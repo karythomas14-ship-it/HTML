@@ -1,0 +1,258 @@
+/* ===================================== /
+/ ============= BUTTONS =============== /
+/ ===================================== */
+
+/* BUTTON BASE */
+
+.retro-menu-btn,
+.cyber-btn,
+#backBtn{
+
+font-family: var(--pixel-font);
+
+border:none;
+
+cursor:pointer;
+
+transition:0.25s;
+
+-webkit-user-select: none;
+user-select:none;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* ===================================== /
+/ MENU BUTTONS /
+/ ===================================== */
+
+.retro-menu-btn{
+
+width:320px;
+
+height:70px;
+
+margin:12px 0;
+
+font-size:18px;
+
+color:white;
+
+border-radius:14px;
+
+text-transform:uppercase;
+
+letter-spacing:2px;
+
+box-shadow:
+    inset 0 -6px rgba(0,0,0,.3),
+    0 8px 18px rgba(0,0,0,.35);
+
+}
+
+/* PLAY */
+
+.play-btn{
+
+background:
+    linear-gradient(
+        180deg,
+        #63ff48,
+        #1bb000
+    );
+
+border:4px solid #84ff75;
+
+}
+
+.play-btn:hover{
+
+transform:
+    translateY(-3px)
+    scale(1.03);
+
+box-shadow:
+    0 0 20px #63ff48,
+    0 0 40px #63ff48;
+
+}
+
+/* DUO */
+
+.duo-menu-btn{
+
+background:
+    linear-gradient(
+        180deg,
+        #ff4c4c,
+        #bf1111
+    );
+
+border:4px solid #ff8a8a;
+
+}
+
+.duo-menu-btn:hover{
+
+transform:
+    translateY(-3px)
+    scale(1.03);
+
+box-shadow:
+    0 0 20px #ff4c4c,
+    0 0 40px #ff4c4c;
+
+}
+
+/* SETTINGS */
+
+.settings-menu-btn{
+
+background:
+    linear-gradient(
+        180deg,
+        #3db7ff,
+        #005eff
+    );
+
+border:4px solid #6cd1ff;
+
+}
+
+.settings-menu-btn{
+
+transform:
+    translateY(-3px)
+    scale(1.03);
+
+box-shadow:
+    0 0 20px #00bfff,
+    0 0 40px #00bfff;
+
+}
+
+/* ===================================== /
+/ CYBER BUTTON /
+/ ===================================== */
+
+.cyber-btn{
+
+width:220px;
+
+height:60px;
+
+margin-top:12px;
+
+border-radius:12px;
+
+font-size:14px;
+
+color:white;
+
+background:
+    linear-gradient(
+        180deg,
+        #142c47,
+        #071220
+    );
+
+border:3px solid #5bc8ff;
+
+}
+
+.cyber-btn{
+
+transform:translateY(-2px);
+
+box-shadow:
+    0 0 15px #00bfff,
+    0 0 30px #00bfff;
+
+}
+
+/* ===================================== /
+/ SETTINGS BACK /
+/ ===================================== */
+
+#backBtn{
+
+width:220px;
+
+height:55px;
+
+margin-top:25px;
+
+border-radius:12px;
+
+color:white;
+
+background:
+    linear-gradient(
+        180deg,
+        #ff5959,
+        #b40000
+    );
+
+border:3px solid #ff8f8f;
+
+}
+
+#backBtn{
+
+box-shadow:
+    0 0 15px #ff3f3f,
+    0 0 30px #ff3f3f;
+
+}
+
+/* ===================================== /
+/ DUO BUTTONS /
+/ ===================================== */
+
+.duo-btn{
+
+width:180px;
+
+height:55px;
+
+margin:10px 0;
+
+border:none;
+
+border-radius:12px;
+
+font-family:var(--pixel-font);
+
+color:white;
+
+background:
+    linear-gradient(
+        180deg,
+        #183b5f,
+        #071220
+    );
+
+border:3px solid #49c7ff;
+
+cursor:pointer;
+
+transition:.25s;
+
+overflow : hidden;
+
+position : relative;
+
+}
+
+.duo-btn{
+
+transform:translateY(-2px);
+
+box-shadow:
+    0 0 15px #00bfff,
+    0 0 30px #00bfff;
+
+}

@@ -1,0 +1,405 @@
+/* ===================================== /
+/ ============== PANELS =============== /
+/ ===================================== */
+
+/* PANEL CHUNG */
+
+.panel{
+
+background:
+    linear-gradient(
+        180deg,
+        #0b1726,
+        #040b13
+    );
+
+border:4px solid #dcdcdc;
+
+border-radius:16px;
+
+box-shadow:
+    inset 0 0 12px rgba(255,255,255,.08),
+    0 0 20px rgba(0,0,0,.45);
+
+}
+
+/* ===================================== /
+/ NEXT PANEL /
+/ ===================================== */
+
+.next-panel{
+
+width:180px;
+
+padding:18px;
+
+text-align:center;
+
+background:#08111d;
+
+border:4px solid #d8d8d8;
+
+border-radius:16px;
+
+}
+
+.next-panel h3{
+
+margin-bottom:15px;
+
+font-size:14px;
+
+color:#ffffff;
+
+}
+
+#nextCanvas{
+
+width:120px;
+
+height:120px;
+
+margin:auto;
+
+}
+
+/* ===================================== /
+/ HOLD PANEL /
+/ ===================================== */
+
+.hold-panel{
+
+width:180px;
+
+padding:18px;
+
+margin-top:0;
+
+text-align:center;
+
+background:#08111d;
+
+border:4px solid #d8d8d8;
+
+border-radius:16px;
+
+}
+
+.hold-panel h3{
+
+margin-bottom:15px;
+
+font-size:14px;
+
+}
+
+#holdCanvas{
+
+width:120px;
+
+height:120px;
+
+margin:auto;
+
+}
+
+/* ===================================== /
+/ SCORE PANEL /
+/ ===================================== */
+
+.score-panel{
+
+padding:12px;
+
+text-align:center;
+
+}
+
+.score-label{
+
+font-size:13px;
+
+margin-bottom:15px;
+
+}
+
+#score{
+
+font-size:34px;
+
+color:#ffffff;
+
+text-shadow:
+    0 0 10px #00bfff;
+
+}
+
+/* ===================================== /
+/ LOGO PANEL /
+/ ===================================== */
+
+.logo-panel{
+
+padding:15px;
+
+text-align:center;
+
+}
+
+.logo-panel .tetris-style{
+
+font-size:24px;
+
+}
+
+/* ===================================== /
+/ LEADERBOARD /
+/ ===================================== */
+
+.leaderboard-panel{
+
+padding:12px;
+
+}
+
+.leaderboard-title{
+
+text-align:center;
+
+margin-bottom:20px;
+
+font-size:13px;
+
+}
+
+#leaderboard li{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:10px 0;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+#leaderboard li{
+
+border:none;
+
+}
+
+/* ===================================== /
+/ SETTINGS BOX /
+/ ===================================== */
+
+.settingsBox{
+
+width:900px;
+
+max-height:90vh;
+
+overflow-y:auto;
+
+padding:35px;
+
+border-radius:20px;
+
+border:4px solid #dcdcdc;
+
+background:
+
+    linear-gradient(
+        180deg,
+        #091626,
+        #020912
+    );
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+transform:
+    translate(-50%,-50%);
+
+}
+
+.settingsBox h2{
+
+margin-bottom:20px;
+
+margin-top:25px;
+
+font-size:18px;
+
+}
+
+/* ===================================== /
+/ SETTINGS ROW /
+/ ===================================== */
+
+.settingRow{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:14px;
+
+}
+
+.settingRow span{
+
+font-size:12px;
+
+}
+
+.settingRow button{
+
+width:220px;
+
+height:45px;
+
+background:#13263c;
+
+color:white;
+
+border:2px solid #52c7ff;
+
+border-radius:10px;
+
+font-family:var(--pixel-font);
+
+}
+
+/* ===================================== /
+/ DUO PLAYER TOP /
+/ ===================================== */
+
+.player-top-panel{
+
+width:100%;
+
+margin-bottom:20px;
+
+padding:15px;
+
+border-radius:16px;
+
+border:4px solid #d8d8d8;
+
+background:
+    linear-gradient(
+        180deg,
+        #091626,
+        #040b13
+    );
+
+}
+
+.player-name{
+
+text-align:center;
+
+margin-bottom:15px;
+
+font-size:14px;
+
+}
+
+/* ===================================== /
+/ PLAYER STATS /
+/ ===================================== */
+
+.player-stats{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+}
+
+.stat-box{
+
+width:120px;
+
+padding:10px;
+
+text-align:center;
+
+border-radius:10px;
+
+background:#13263c;
+
+border:2px solid #5bc8ff;
+
+}
+
+.stat-box span{
+
+display:block;
+
+font-size:10px;
+
+margin-bottom:10px;
+
+}
+
+.stat-box p{
+
+font-size:18px;
+
+}
+
+/* ===================================== /
+/ HOLD BOX DUO /
+/ ===================================== */
+
+.hold-box{
+
+width:180px;
+
+height:240px;
+
+padding:18px;
+
+text-align:center;
+
+border-radius:16px;
+
+border:4px solid #dcdcdc;
+
+background:
+    linear-gradient(
+        180deg,
+        #091626,
+        #040b13
+    );
+
+}
+
+.hold-box h3{
+
+margin-bottom:15px;
+
+}
+
+#holdCanvas1,
+#holdCanvas2{
+
+width:120px;
+
+height:120px;
+
+margin:auto;
+
+}

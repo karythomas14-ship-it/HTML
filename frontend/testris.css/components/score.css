@@ -1,0 +1,319 @@
+/* ===================================== /
+/ ============== SCORE ================ /
+/ ===================================== */
+
+/* SCORE CHUNG */
+
+#score,
+#score1,
+#score2{
+
+font-family:var(--pixel-font);
+
+color:#ffffff;
+
+text-align:center;
+
+-webkit-user-select:none;
+user-select:none;
+
+}
+
+/* ===================================== /
+/ SOLO SCORE /
+/ ===================================== */
+
+#score{
+
+font-size:34px;
+
+line-height:1.4;
+
+text-shadow:
+    0 0 5px #00bfff,
+    0 0 10px #00bfff,
+    0 0 20px #00bfff;
+
+animation:
+    scoreGlow 2s infinite ease-in-out;
+
+}
+
+/* ===================================== /
+/ DUO SCORE /
+/ ===================================== */
+
+#score1,
+#score2{
+
+font-size:22px;
+
+text-shadow:
+    0 0 4px #00bfff,
+    0 0 8px #00bfff,
+    0 0 15px #00bfff;
+
+}
+
+/* ===================================== /
+/ DIFF /
+/ ===================================== */
+
+#diff1,
+#diff2{
+
+font-size:18px;
+
+color:#ffffff;
+
+text-shadow:
+    0 0 5px #52ff52,
+    0 0 10px #52ff52;
+
+}
+
+/* ===================================== /
+/ POSITIVE DIFF /
+/ ===================================== */
+
+.diff-positive{
+
+color:#61ff37 !important;
+
+text-shadow:
+    0 0 10px #61ff37,
+    0 0 20px #61ff37;
+
+}
+
+/* ===================================== /
+/ NEGATIVE DIFF /
+/ ===================================== */
+
+.diff-negative{
+
+color:#ff4343 !important;
+
+text-shadow:
+    0 0 10px #ff4343,
+    0 0 20px #ff4343;
+
+}
+
+/* ===================================== /
+/ SCORE POPUP /
+/ ===================================== */
+
+.score-popup{
+
+position:absolute;
+
+pointer-events:none;
+
+z-index:999;
+
+font-size:16px;
+
+color:#ffe600;
+
+text-shadow:
+    0 0 10px #ffe600,
+    0 0 20px #ffe600;
+
+animation:
+    scorePopup 1s ease-out forwards;
+
+}
+
+/* ===================================== /
+/ TETRIS BONUS /
+/ ===================================== */
+
+.tetris-bonus{
+
+position:absolute;
+
+left:50%;
+
+transform:translateX(-50%);
+
+top:120px;
+
+font-size:22px;
+
+color:#00ffff;
+
+text-shadow:
+    0 0 10px #00ffff,
+    0 0 20px #00ffff,
+    0 0 40px #00ffff;
+
+animation:
+    tetrisBonus 1.2s ease-out forwards;
+
+}
+
+/* ===================================== /
+/ LEVEL UP /
+/ ===================================== */
+
+.level-up{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+font-size:30px;
+
+color:#ffdd00;
+
+text-shadow:
+    0 0 10px #ffdd00,
+    0 0 20px #ffdd00,
+    0 0 40px #ffdd00;
+
+z-index:9999;
+
+animation:
+    levelUpAnim 1.5s ease-out forwards;
+
+}
+
+/* ===================================== /
+/ SCORE GLOW /
+/ ===================================== */
+
+@keyframes scoreGlow{
+
+0%{
+
+    text-shadow:
+        0 0 5px #00bfff,
+        0 0 10px #00bfff;
+
+}
+
+50%{
+
+    text-shadow:
+        0 0 10px #00bfff,
+        0 0 20px #00bfff,
+        0 0 40px #00bfff;
+
+}
+
+100%{
+
+    text-shadow:
+        0 0 5px #00bfff,
+        0 0 10px #00bfff;
+
+}
+
+}
+
+/* ===================================== /
+/ SCORE POPUP ANIMATION /
+/ ===================================== */
+
+@keyframes scorePopup{
+
+0%{
+
+    opacity:0;
+
+    transform:
+        translateY(20px)
+        scale(.7);
+
+}
+
+25%{
+
+    opacity:1;
+
+}
+
+100%{
+
+    opacity:0;
+
+    transform:
+        translateY(-50px)
+        scale(1.2);
+
+}
+
+}
+
+/* ===================================== /
+/ TETRIS BONUS /
+/ ===================================== */
+
+@keyframes tetrisBonus{
+
+0%{
+
+    opacity:0;
+
+    transform:
+        translateX(-50%)
+        scale(.6);
+
+}
+
+30%{
+
+    opacity:1;
+
+}
+
+100%{
+
+    opacity:0;
+
+    transform:
+        translateX(-50%)
+        scale(1.5);
+
+}
+
+}
+
+/* ===================================== /
+/ LEVEL UP /
+/ ===================================== */
+
+@keyframes levelUpAnim{
+
+0%{
+
+    opacity:0;
+
+    transform:
+        translate(-50%,-50%)
+        scale(.4);
+
+}
+
+25%{
+
+    opacity:1;
+
+}
+
+100%{
+
+    opacity:0;
+
+    transform:
+        translate(-50%,-50%)
+        scale(1.6);
+
+}
+
+}

@@ -1,0 +1,301 @@
+/* ===================================== /
+/ ============= CONTROLS ============== /
+/ ===================================== */
+
+/* SETTINGS CONTAINER */
+
+.settingRow{
+
+position:relative;
+
+}
+
+/* ===================================== /
+/ KEY BUTTON /
+/ ===================================== */
+
+.settingRow button{
+
+width:220px;
+
+height:46px;
+
+border-radius:10px;
+
+border:2px solid #5bc8ff;
+
+background:
+    linear-gradient(
+        180deg,
+        #17314f,
+        #0a1624
+    );
+
+color:#ffffff;
+
+font-family:var(--pixel-font);
+
+font-size:10px;
+
+transition:.25s;
+
+cursor:pointer;
+
+}
+
+/* ===================================== /
+/ HOVER /
+/ ===================================== */
+
+.settingRow button{
+
+transform:translateY(-2px);
+
+box-shadow:
+    0 0 10px #00bfff,
+    0 0 20px #00bfff;
+
+}
+
+/* ===================================== /
+/ WAITING INPUT /
+/ ===================================== */
+
+.waiting-key{
+
+border-color:#ffd500 !important;
+
+color:#ffd500 !important;
+
+animation:
+    waitingBlink .8s infinite;
+
+}
+
+@keyframes waitingBlink{
+
+0%{
+
+    opacity:1;
+
+}
+
+50%{
+
+    opacity:.4;
+
+}
+
+100%{
+
+    opacity:1;
+
+}
+
+}
+
+/* ===================================== /
+/ SUCCESS /
+/ ===================================== */
+
+.key-success{
+
+border-color:#61ff37 !important;
+
+color:#61ff37 !important;
+
+box-shadow:
+    0 0 10px #61ff37,
+    0 0 20px #61ff37;
+
+}
+
+/* ===================================== /
+/ DUPLICATE ERROR /
+/ ===================================== */
+
+.key-error{
+
+border-color:#ff4343 !important;
+
+color:#ff4343 !important;
+
+animation:
+    shakeError .35s;
+
+}
+
+@keyframes shakeError{
+
+0%{
+
+    transform:translateX(0);
+
+}
+
+20%{
+
+    transform:translateX(-6px);
+
+}
+
+40%{
+
+    transform:translateX(6px);
+
+}
+
+60%{
+
+    transform:translateX(-6px);
+
+}
+
+80%{
+
+    transform:translateX(6px);
+
+}
+
+100%{
+
+    transform:translateX(0);
+
+}
+
+}
+
+/* ===================================== /
+/ KEY LABEL /
+/ ===================================== */
+
+.settingRow span{
+
+color:white;
+
+letter-spacing:1px;
+
+}
+
+/* ===================================== /
+/ SETTINGS TITLE /
+/ ===================================== */
+
+.settingsBox h2{
+
+color:#00bfff;
+
+text-shadow:
+    0 0 10px #00bfff;
+
+}
+
+/* ===================================== /
+/ ACTIVE GROUP /
+/ ===================================== */
+
+.control-group-active{
+
+padding:12px;
+
+border-radius:12px;
+
+background:
+    rgba(0,191,255,.08);
+
+border:2px solid rgba(0,191,255,.25);
+
+}
+
+/* ===================================== /
+/ SAVE MESSAGE /
+/ ===================================== */
+
+.save-message{
+
+position:absolute;
+
+bottom:25px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:12px;
+
+color:#61ff37;
+
+text-shadow:
+    0 0 10px #61ff37;
+
+animation:
+    saveFade 2s forwards;
+
+}
+
+@keyframes saveFade{
+
+0%{
+
+    opacity:0;
+
+}
+
+20%{
+
+    opacity:1;
+
+}
+
+80%{
+
+    opacity:1;
+
+}
+
+100%{
+
+    opacity:0;
+
+}
+
+}
+
+/* ===================================== /
+/ RESET BUTTON /
+/ ===================================== */
+
+.reset-controls-btn{
+
+width:260px;
+
+height:50px;
+
+margin-top:20px;
+
+border-radius:12px;
+
+border:3px solid #ff8f8f;
+
+background:
+    linear-gradient(
+        180deg,
+        #ff5555,
+        #b30000
+    );
+
+color:white;
+
+font-family:var(--pixel-font);
+
+cursor:pointer;
+
+}
+
+.reset-controls-btn{
+
+box-shadow:
+    0 0 15px #ff4343,
+    0 0 30px #ff4343;
+
+}

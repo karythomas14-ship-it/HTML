@@ -1,0 +1,256 @@
+/* ===================================== /
+/ ============ TETRIS BOARD =========== /
+/ ===================================== */
+
+/* KHUNG CHUNG */
+
+.board-frame{
+
+position:relative;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:16px;
+
+flex-shrink:0;
+
+order : 1;
+
+}
+
+/* ===================================== /
+/ SOLO BOARD /
+/ ===================================== */
+
+#board{
+
+height:min(
+    72vh,
+    680px
+);
+
+aspect-ratio:1/2;
+
+width:auto;
+
+display:block;
+
+}
+
+/* ===================================== /
+/ DUO BOARD /
+/ ===================================== */
+
+.board1-frame .board-light-top,
+.board1-frame .board-light-bottom,
+.board1-frame .board-side-light{
+    background:#35dfff;
+
+    box-shadow:
+        0 0 10px #35dfff,
+        0 0 20px #35dfff,
+        0 0 40px #35dfff;
+}
+
+.board2-frame .board-light-top,
+.board2-frame .board-light-bottom,
+.board2-frame .board-side-light{
+    background:#ff4f7a;
+
+    box-shadow:
+        0 0 10px #ff4f7a,
+        0 0 20px #ff4f7a,
+        0 0 40px #ff4f7a;
+}
+
+/* ===================================== /
+/ TOP LIGHT /
+/ ===================================== */
+
+.board-light-top{
+
+position:absolute;
+
+top:-5px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:75%;
+
+height:10px;
+
+border-radius:999px;
+
+background:#59d4ff;
+
+box-shadow:
+    0 0 10px #59d4ff,
+    0 0 20px #59d4ff,
+    0 0 40px #59d4ff;
+
+}
+
+/* ===================================== /
+/ BOTTOM LIGHT /
+/ ===================================== */
+
+.board-light-bottom{
+
+position:absolute;
+
+bottom:-5px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:75%;
+
+height:10px;
+
+border-radius:999px;
+
+background:#59d4ff;
+
+box-shadow:
+    0 0 10px #59d4ff,
+    0 0 20px #59d4ff,
+    0 0 40px #59d4ff;
+
+}
+
+/* ===================================== /
+/ SIDE LIGHT BASE /
+/ ===================================== */
+
+.board-side-light{
+
+position:absolute;
+
+width:8px;
+
+border-radius:999px;
+
+background:#59d4ff;
+
+box-shadow:
+    0 0 10px #59d4ff,
+    0 0 20px #59d4ff,
+    0 0 40px #59d4ff;
+
+}
+
+/* ===================================== /
+/ LEFT SIDE /
+/ ===================================== */
+
+.board-side-left-1{
+
+left:-5px;
+
+top:10%;
+
+height:30%;
+
+}
+
+.board-side-left-2{
+
+left:-5px;
+
+bottom:10%;
+
+height:30%;
+
+}
+
+/* ===================================== /
+/ RIGHT SIDE /
+/ ===================================== */
+
+.board-side-right-1{
+
+right:-5px;
+
+top:10%;
+
+height:30%;
+
+}
+
+.board-side-right-2{
+
+right:-5px;
+
+bottom:10%;
+
+height:30%;
+
+}
+
+
+/* ===================================== /
+/ DUO LOGO /
+/ ===================================== */
+
+.duo-logo{
+
+    font-size:42px;
+
+    background:linear-gradient(
+        90deg,
+        #35dfff,
+        #a94cff,
+        #ff4f7a
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+
+    text-shadow:
+        0 0 10px rgba(53,223,255,.8),
+        0 0 25px rgba(169,76,255,.8),
+        0 0 40px rgba(255,79,122,.8);
+}
+
+/* ===================================== /
+/ BOARD GLOW ANIMATION /
+/ ===================================== */
+
+@keyframes boardGlow{
+
+0%{
+
+    opacity:.6;
+
+}
+
+50%{
+
+    opacity:1;
+
+}
+
+100%{
+
+    opacity:.6;
+
+}
+
+}
+
+.board-light-top,
+.board-light-bottom,
+.board-side-light{
+
+animation:
+    boardGlow 2s infinite ease-in-out;
+
+}

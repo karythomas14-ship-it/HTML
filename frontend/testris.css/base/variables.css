@@ -1,0 +1,62 @@
+:root{
+
+    /* ========= COLORS ========= */
+
+    --bg-dark:#020617;
+    --bg-panel:#07111f;
+
+    --white:#ffffff;
+    --black:#000000;
+
+    --blue:#00bfff;
+    --blue-dark:#005eff;
+
+    --green:#4cff00;
+    --green-dark:#18a800;
+
+    --red:#ff2e2e;
+    --red-dark:#b00000;
+
+    --purple:#c000ff;
+    --purple-dark:#7d00d6;
+
+    --yellow:#ffd500;
+    --orange:#ff7b00;
+
+    /* ========= BORDER ========= */
+
+    --panel-border:4px solid #d8d8d8;
+
+    /* ========= SHADOW ========= */
+
+    --glow-blue:
+        0 0 10px #00bfff,
+        0 0 20px #00bfff;
+
+    --glow-green:
+        0 0 10px #4cff00,
+        0 0 20px #4cff00;
+
+    --glow-red:
+        0 0 10px #ff2e2e,
+        0 0 20px #ff2e2e;
+
+    --glow-purple:
+        0 0 10px #c000ff,
+        0 0 20px #c000ff;
+
+    /* ========= TETRIS COLORS ========= */
+
+    --i-piece:#29adff;
+    --o-piece:#ffd500;
+    --t-piece:#b44cff;
+    --s-piece:#61ff37;
+    --z-piece:#ff4141;
+    --j-piece:#2d63ff;
+    --l-piece:#ff8f00;
+
+    /* ========= FONT ========= */
+
+    --pixel-font:"Press Start 2P", cursive;
+
+}
