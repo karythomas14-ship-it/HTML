@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu Visual Studio Code</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Giới thiệu Visual Studio Code</h1>
+        <p>
+            Visual Studio Code là một trình soạn thảo mã nguồn miễn phí,
+            được phát triển bởi Microsoft và được sử dụng phổ biến trong lập trình.
+        </p>
+    </header>
+
+    <main>
+
+        <!-- Giới thiệu -->
+        <section>
+            <h2>1. Visual Studio Code là gì?</h2>
+
+            <p>
+                Visual Studio Code (VS Code) là một trình soạn thảo mã nguồn
+                nhẹ và mạnh mẽ, hỗ trợ nhiều ngôn ngữ lập trình khác nhau.
+                VS Code có thể được sử dụng để phát triển website,
+                ứng dụng, phần mềm và nhiều dự án công nghệ khác.
+            </p>
+
+            <img src="images/vscode.jpg"
+                 alt="Logo Visual Studio Code"
+                 width="250">
+
+            <img src="images/vscode-interface.jpg"
+                 alt="Giao diện Visual Studio Code"
+                 width="500">
+        </section>
+
+
+        <!-- Đặc điểm -->
+        <section>
+            <h2>2. Đặc điểm nổi bật</h2>
+
+            <ul>
+                <li>Hỗ trợ nhiều ngôn ngữ lập trình.</li>
+                <li>Có hệ thống tiện ích mở rộng phong phú.</li>
+                <li>Hỗ trợ gợi ý và tự động hoàn thành mã.</li>
+                <li>Tích hợp Git và GitHub.</li>
+                <li>Có công cụ Debug giúp tìm và sửa lỗi.</li>
+                <li>Hỗ trợ Terminal ngay trong phần mềm.</li>
+            </ul>
+        </section>
+
+
+        <!-- Thông tin -->
+        <section>
+            <h2>3. Thông tin chi tiết</h2>
+
+            <table border="1">
+                <tr>
+                    <th>Thông tin</th>
+                    <th>Nội dung</th>
+                    <th>Chi tiết</th>
+                </tr>
+
+                <tr>
+                    <td>Tên</td>
+                    <td>Visual Studio Code</td>
+                    <td>VS Code</td>
+                </tr>
+
+                <tr>
+                    <td>Nhà phát triển</td>
+                    <td>Microsoft</td>
+                    <td>Phát triển bởi Microsoft</td>
+                </tr>
+
+                <tr>
+                    <td>Hệ điều hành</td>
+                    <td>Windows, macOS, Linux</td>
+                    <td>Hỗ trợ đa nền tảng</td>
+                </tr>
+
+                <tr>
+                    <td>Ngôn ngữ hỗ trợ</td>
+                    <td>Python, JavaScript, C++, Java...</td>
+                    <td>Có thể mở rộng thêm</td>
+                </tr>
+
+                <tr>
+                    <td>Chi phí</td>
+                    <td>Miễn phí</td>
+                    <td>Có thể sử dụng miễn phí</td>
+                </tr>
+            </table>
+        </section>
+
+
+        <!-- Ưu điểm -->
+        <section>
+            <h2>4. Ưu điểm</h2>
+
+            <ul>
+                <li>Giao diện đơn giản và dễ sử dụng.</li>
+                <li>Hỗ trợ nhiều ngôn ngữ lập trình.</li>
+                <li>Có nhiều extension hỗ trợ lập trình.</li>
+                <li>Hoạt động trên nhiều hệ điều hành.</li>
+            </ul>
+        </section>
+
+
+        <!-- Hạn chế -->
+        <section>
+            <h2>5. Hạn chế</h2>
+
+            <ul>
+                <li>Có thể cần cài đặt thêm extension để sử dụng một số tính năng.</li>
+                <li>Nhiều extension có thể làm phần mềm sử dụng nhiều tài nguyên hơn.</li>
+            </ul>
+        </section>
+
+
+        <!-- Tài liệu tham khảo -->
+        <section>
+            <h2>6. Liên kết tham khảo</h2>
+
+            <ul>
+                <li>
+                    <a href="https://code.visualstudio.com/" target="_blank">
+                        Trang chủ Visual Studio Code
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://code.visualstudio.com/docs" target="_blank">
+                        Tài liệu Visual Studio Code
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 - Bài tập HTML giới thiệu công nghệ</p>
+    </footer>
+
+</body>
+
+</html>
